@@ -202,13 +202,18 @@ header {
   font-size: 0.9rem;
   line-height: 1.5;
 }
-
-/* --- Projects Section --- */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 .project-card {
   background-color: var(--bg-card);
